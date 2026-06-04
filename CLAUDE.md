@@ -46,14 +46,14 @@ Flat config (`eslint.config.js`). The `no-unused-vars` rule ignores variables st
 
 ## Git Workflow
 
-Default branch is `master`. Remote is `origin` (GitHub: `asimtimsina/job-portal-ui`).
+Default branch is `main`. Remote is `origin` (GitHub: `asimtimsina/job-portal-ui`).
 
 ### Branching Strategy
 
-Trunk-based with short-lived feature branches off `master`:
+Trunk-based with short-lived feature branches off `main`:
 
-- **`master`** — always deployable; never commit directly except for trivial docs/config tweaks (and only when explicitly requested).
-- **Feature branches** — branch off latest `master`, keep scope tight, rebase or merge `master` in if they go stale (>2 days).
+- **`main`** — always deployable; never commit directly except for trivial docs/config tweaks (and only when explicitly requested).
+- **Feature branches** — branch off latest `main`, keep scope tight, rebase or merge `main` in if they go stale (>2 days).
 - **Naming** — `<type>/<short-kebab-summary>`, e.g. `feat/saved-jobs-pagination`, `fix/login-redirect-loop`, `chore/upgrade-vite-7`, `refactor/auth-context-split`, `docs/readme-setup`.
 - **Lifetime** — delete the branch after the PR merges (locally + remote).
 
@@ -78,11 +78,11 @@ Use [Conventional Commits](https://www.conventionalcommits.org/) with an imperat
 
 ### PR Strategy
 
-- **Always via PR** — even solo, open a PR rather than pushing to `master` directly. It gives a review surface and a deploy checkpoint.
+- **Always via PR** — even solo, open a PR rather than pushing to `main` directly. It gives a review surface and a deploy checkpoint.
 - **Title** — same Conventional Commits format as the lead commit, ≤70 chars.
 - **Body template** — `## Summary` (1–3 bullets on *what + why*) + `## Test plan` (checklist of how it was verified: `npm run lint`, `npm run build`, manual flows touched).
 - **Size** — aim for <400 LOC diff; split larger work into stacked PRs when feasible.
-- **Merge style** — **squash and merge** into `master` to keep history linear; the squash commit message should match Conventional Commits.
+- **Merge style** — **squash and merge** into `main` to keep history linear; the squash commit message should match Conventional Commits.
 - **Before merging** — `npm run lint` and `npm run build` must pass; manually verify the feature in `npm run dev` for UI changes.
 - **After merging** — delete the remote branch (GitHub option) and the local branch (`git branch -d <name>`).
-- **Never** force-push to `master`; force-push to feature branches only with `--force-with-lease`.
+- **Never** force-push to `main`; force-push to feature branches only with `--force-with-lease`.
