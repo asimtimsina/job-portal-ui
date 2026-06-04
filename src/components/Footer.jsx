@@ -149,9 +149,24 @@ const Footer = () => {
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a
+                className="group relative hover:text-white transition-colors duration-300 cursor-help"
+                aria-describedby="cookie-policy-tooltip"
+              >
                 <span className="relative z-10">Cookie Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div
+                  id="cookie-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 max-w-[calc(100vw-2rem)] p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 text-xs leading-relaxed shadow-xl opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 z-20"
+                >
+                  We use cookies and similar technologies to keep you signed in,
+                  remember your preferences, and understand how JobPortal is
+                  used. By continuing to browse the site you consent to our use
+                  of cookies. You can disable non-essential cookies in your
+                  browser settings.
+                  <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 h-2 w-2 rotate-45 bg-gray-900 border-r border-b border-gray-700"></span>
+                </div>
               </a>
               <Link
                 to="/contact"
