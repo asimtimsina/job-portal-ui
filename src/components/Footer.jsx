@@ -141,9 +141,23 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a
+                className="group relative hover:text-white transition-colors duration-300 cursor-help"
+                aria-describedby="privacy-policy-tooltip"
+              >
                 <span className="relative z-10">Privacy Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div
+                  id="privacy-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 max-w-[calc(100vw-2rem)] p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 text-xs leading-relaxed shadow-xl opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 z-20"
+                >
+                  We respect your privacy. JobPortal collects only the
+                  information needed to match you with opportunities, never
+                  sells your personal data, and lets you review or delete it
+                  from your account settings at any time.
+                  <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 h-2 w-2 rotate-45 bg-gray-900 border-r border-b border-gray-700"></span>
+                </div>
               </a>
               <a className="group relative hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Terms of Service</span>
